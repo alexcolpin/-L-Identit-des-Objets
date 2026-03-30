@@ -2,8 +2,11 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello, World!");
+        Produit p1 = new Produit("A01", "Souris", 15.0);
+
+        Console.WriteLine(p1);
+        Console.WriteLine(p1.ToString());
     }
 }
