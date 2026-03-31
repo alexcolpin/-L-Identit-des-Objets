@@ -4,8 +4,29 @@ class Program
 {
     static void Main()
     {
-        Produit article = new ProduitPerissable("B05", "Lait", 15.0, 5);
+        
+        List<object> inventaire = new List<object>();
 
-        Console.WriteLine(article.GetType());
+        inventaire.Add(1); 
+        inventaire.Add("Depot A"); 
+        Produit p1 = new Produit("A01", "Souris", 15.0);
+        inventaire.Add(p1);
+
+        foreach (object item in inventaire)
+        {
+            
+            Console.WriteLine("Type : " + item.GetType());
+
+            
+            Console.WriteLine("Valeur : " + item.ToString());
+
+            
+            if (item is Produit p)
+            {
+                Console.WriteLine("Code article : " + p.GetCodeArticle());
+            }
+
+            Console.WriteLine("-----");
+        }
     }
 }
