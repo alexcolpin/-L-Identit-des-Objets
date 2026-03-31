@@ -29,4 +29,8 @@ class Produit
         }
         return false;
     }
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(codeArticle);
+    }
 }
