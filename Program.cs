@@ -4,14 +4,8 @@ class Program
 {
     static void Main()
     {
-        HashSet<Produit> panier = new HashSet<Produit>();
+        Produit article = new ProduitPerissable("B05", "Lait", 15.0, 5);
 
-        Produit p1 = new Produit("A01", "Souris", 15.0);
-        Produit p2 = new Produit("A01", "Souris", 15.0);
-
-        panier.Add(p1);
-        panier.Add(p2);
-
-        Console.WriteLine(panier.Count);
+        Console.WriteLine(article.GetType());
     }
 }
